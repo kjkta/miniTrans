@@ -12,8 +12,7 @@
   "scripts": {
     "prepare": "babel src --out-dir lib"
   },
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {    
     "@babel/cli": "^7.0.0-beta.37",
     "@babel/core": "^7.0.0-beta.37",
     "@babel/preset-env": "^7.0.0-beta.37"
