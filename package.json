@@ -1,5 +1,5 @@
 {
-  "name": "miniTrans",
+  "name": "mini-trans",
   "version": "0.0.1",
   "description": "A stupid simple javascript translation tool",
   "main": "./lib/index.js",
@@ -12,7 +12,7 @@
   "scripts": {
     "prepare": "babel src --out-dir lib"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "@babel/cli": "^7.0.0-beta.37",
     "@babel/core": "^7.0.0-beta.37",
     "@babel/preset-env": "^7.0.0-beta.37"
