@@ -7,6 +7,7 @@ const getTranslation = (msgId) => {
   if(miniTrans.locale === "en") return msgId
   const msg = miniTrans.messages[miniTrans.locale][msgId]
   if(msg) return msg
+  else return msgId
   return ""
 }
 
