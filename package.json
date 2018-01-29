@@ -10,7 +10,7 @@
   "author": "Kyle Thomson <kjay.thomson@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "prepare": "babel src --out-dir lib"
+    "prepare": "babel src --presets=@babel/preset-env --out-dir lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.37",
