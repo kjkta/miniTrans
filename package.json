@@ -1,6 +1,6 @@
 {
   "name": "mini-trans",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A stupid simple javascript translation tool",
   "main": "./lib/index.js",
   "repository": {
