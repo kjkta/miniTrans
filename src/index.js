@@ -1,8 +1,12 @@
-function makeTranslations(messages = {}, locale = "en") {
-  return function getTranslation(msgId, variables) {
-		// It's english, return the ID
-    if (locale === "en") return msgId;
-		let message = getMessage(messages, locale, msgId)
+function makeTranslations(translations = {}, locale = "en") {
+  return function getTranslation(messageKey, variables) {
+		let message;
+    if (locale === "en") {
+			// It's english so just use the ID
+			message = messageKey
+		} else {
+			message = getMessage(translations, locale, messageKey)
+		}
 		if(variables) {
 			message = insertVariablesIntoMessage(message, variables)
 		}
@@ -10,14 +14,14 @@ function makeTranslations(messages = {}, locale = "en") {
 	}
 }
 
-function getMessage(messages, locale, msgId) {
-	if(messages[locale]) {
-		// We have messages for this locale	
+function getMessage(translations, locale, messageKey) {
+	if(translations[locale]) {
+		// We have translations for this locale	
 		// If we have a message for this ID use that,
 		// otherwise use the ID
-		return messages[locale][msgId] || msgId
+		return translations[locale][messageKey] || messageKey
 	} else {
-		return msgId
+		return messageKey
 	}
 }
 

@@ -22,6 +22,10 @@ test("returns default message if no translation", () => {
   expect(t("Goodnight")).toBe("Goodnight");
 });
 
+test("return english with variable", function() {
+	let t = makeTranslations(translations, "en")
+	expect(t("Hello %s", ["Superman"])).toBe("Hello Superman")
+})
 
 test("return translation with variable", function() {
 	let t = makeTranslations(translations, "da")
