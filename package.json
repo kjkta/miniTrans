@@ -15,10 +15,12 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "test": "jest"
+    "test": "jest",
+    "release": "release-it"
   },
   "devDependencies": {
     "jest": "^24.9.0",
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.11.0",
+    "release-it": "^12.4.3"
   }
 }
