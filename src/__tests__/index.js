@@ -1,8 +1,9 @@
-import { makeTranslations } from "../";
+const { makeTranslations } = require("../index.js");
 
 let translations = {
   da: {
-    Hello: "Hej"
+    Hello: "Hej",
+		"Hello %s": "Hej %s"
   }
 };
 
@@ -20,3 +21,9 @@ test("returns default message if no translation", () => {
   let t = makeTranslations(translations, "da");
   expect(t("Goodnight")).toBe("Goodnight");
 });
+
+
+test("return translation with variable", function() {
+	let t = makeTranslations(translations, "da")
+	expect(t("Hello %s", ["Superman"])).toBe("Hej Superman")
+})

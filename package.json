@@ -1,24 +1,24 @@
 {
   "name": "mini-trans",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A stupid simple javascript translation tool",
-  "main": "./lib/index.js",
   "repository": {
     "url": "https://github.com/kjkta/miniTrans",
     "type": "git"
   },
   "author": "Kyle Thomson <kjay.thomson@gmail.com>",
   "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
-    "prepare": "babel src/index.js --out-file lib/index.js"
-  },
-  "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0"
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest"
   },
   "devDependencies": {
-    "babel-jest": "^22.4.3",
-    "jest": "^22.4.3"
+    "jest": "^24.9.0",
+    "microbundle": "^0.11.0"
   }
 }
