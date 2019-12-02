@@ -16,7 +16,7 @@
     "build": "microbundle",
     "dev": "microbundle watch",
     "test": "jest",
-    "release": "release-it"
+    "release": "yarn build && release-it"
   },
   "devDependencies": {
     "jest": "^24.9.0",
