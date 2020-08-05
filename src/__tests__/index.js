@@ -31,3 +31,8 @@ test("return translation with variable", function() {
 	let t = makeTranslations(translations, "da")
 	expect(t("Hello %s", ["Superman"])).toBe("Hej Superman")
 })
+
+test("return translation with variable adding 's", function() {
+	let t = makeTranslations(translations, "da")
+	expect(t("Hello %s's beer in %s's fridge", ["there", "Barry"])).toBe("Hello there's beer in Barry's fridge")
+})

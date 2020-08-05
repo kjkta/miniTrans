@@ -26,10 +26,10 @@ function getMessage(translations, locale, messageKey) {
 }
 
 function insertVariablesIntoMessage(message, variables) {
-	let completeMessage;
-	variables.forEach(function(variable){
-		completeMessage = message.replace('%s', variable)
-	})
+	let completeMessage = message;
+	for(let variable of variables) {
+		completeMessage = completeMessage.replace('%s', variable)
+	}
 	return completeMessage
 }
 
